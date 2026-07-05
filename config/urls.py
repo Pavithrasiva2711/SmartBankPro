@@ -5,6 +5,8 @@ from accounts import api_views
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.conf import settings
+from django.conf.urls.static import static
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -58,3 +60,6 @@ path("profile/", views.profile, name="profile"),
 path("statement/pdf/", views.download_statement_pdf, name="download-pdf"),
 path("statement/excel/", views.download_statement_excel, name="download-excel"),
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
