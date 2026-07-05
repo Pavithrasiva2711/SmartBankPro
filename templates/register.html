@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+<div class="container py-5">
+
+    <!-- Header -->
+
+    <div class="register-header">
+
+        <h1>
+
+            Open Your SmartBank Account
+
+        </h1>
+
+        <p>
+
+            Complete the details below to create your secure digital banking account.
+
+        </p>
+
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10">
+
+            <div class="register-card">
+
+                <form method="POST">
+
+                    {% csrf_token %}
+
+                    <!-- ACCOUNT DETAILS -->
+
+                    <h4 class="section-title">
+
+                        Account Information
+
+                    </h4>
+
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-4">
+
+                            <label class="form-label">
+
+                                Username
+
+                            </label>
+
+                            {{ user_form.username }}
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <label class="form-label">
+
+                                Email Address
+
+                            </label>
+
+                            {{ user_form.email }}
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <label class="form-label">
+
+                                Password
+
+                            </label>
+
+                            {{ user_form.password }}
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <label class="form-label">
+
+                                Confirm Password
+
+                            </label>
+
+                            {{ user_form.confirm_password }}
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <!-- PERSONAL DETAILS -->
+
+                    <h4 class="section-title">
+
+                        Personal Information
+
+                    </h4>
+
+                    <div class="row">
+
+                        <div class="col-lg-6 mb-4">
+
+                            <label class="form-label">
+
+                                Full Name
+
+                            </label>
+
+                            {{ customer_form.full_name }}
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <label class="form-label">
+
+                                Mobile Number
+
+                            </label>
+
+                            {{ customer_form.mobile }}
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <label class="form-label">
+
+                                Date of Birth
+
+                            </label>
+
+                            {{ customer_form.date_of_birth }}
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <label class="form-label">
+
+                                Account Type
+
+                            </label>
+
+                            {{ customer_form.account_type }}
+
+                        </div>
+
+                        <div class="col-12 mb-4">
+
+                            <label class="form-label">
+
+                                Address
+
+                            </label>
+
+                            {{ customer_form.address }}
+
+                        </div>
+
+                    </div>
+
+                    {% if user_form.errors %}
+
+                    <div class="alert alert-danger">
+
+                        {{ user_form.errors }}
+
+                    </div>
+
+                    {% endif %}
+
+                    {% if customer_form.errors %}
+
+                    <div class="alert alert-danger">
+
+                        {{ customer_form.errors }}
+
+                    </div>
+
+                    {% endif %}
+
+                    <button class="register-btn">
+
+                        Create My Account
+
+                    </button>
+
+                    <div class="login-link">
+
+                        Already have an account?
+
+                        <a href="{% url 'login' %}">
+
+                            Sign In
+
+                        </a>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

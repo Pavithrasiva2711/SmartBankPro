@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/transactions.css' %}">
+
+<div class="container py-5">
+
+    <!-- Header -->
+
+    <div class="page-header">
+
+        <h1>Transaction History</h1>
+
+        <p>
+            View and filter all your banking transactions securely.
+        </p>
+
+    </div>
+
+    <!-- Filter Card -->
+
+    <div class="filter-card">
+<div class="download-btns">
+
+    <a href="{% url 'download-pdf' %}" class="btn btn-danger">
+
+        <i class="fas fa-file-pdf me-2"></i>
+
+        Download PDF
+
+    </a>
+
+    <a href="{% url 'download-excel' %}" class="btn btn-success">
+
+        <i class="fas fa-file-excel me-2"></i>
+
+        Download Excel
+
+    </a>
+
+</div>
+        <form method="GET">
+
+            <div class="row g-3 align-items-end">
+
+                <div class="col-lg-4 col-md-12">
+
+                    <label class="form-label">
+                        Transaction Type
+                    </label>
+
+                    <input
+                        type="text"
+                        name="search"
+                        class="form-control"
+                        placeholder="Deposit / Withdraw / Transfer"
+                        value="{{ search }}">
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <label class="form-label">
+
+                        From Date
+
+                    </label>
+
+                    <input
+                        type="date"
+                        name="from_date"
+                        class="form-control"
+                        value="{{ from_date }}">
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+
+                    <label class="form-label">
+
+                        To Date
+
+                    </label>
+
+                    <input
+                        type="date"
+                        name="to_date"
+                        class="form-control"
+                        value="{{ to_date }}">
+
+                </div>
+
+                <div class="col-lg-2 col-md-12">
+
+                   <button class="btn btn-primary filter-btn">
+
+    <i class="fas fa-search me-2"></i>
+
+    Filter
+
+</button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- Table -->
+
+    <div class="table-card">
+
+        <div class="table-responsive">
+
+            <table class="table align-middle mb-0">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Date & Time</th>
+
+                        <th>Type</th>
+
+                        <th>Amount</th>
+
+                        <th>Balance</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                {% for transaction in transactions %}
+
+                    <tr>
+
+                        <td>
+
+                            {{ transaction.created_at|date:"d M Y • H:i" }}
+
+                        </td>
+
+                        <td>
+
+                            <span class="type-badge">
+
+                                {{ transaction.transaction_type }}
+
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            ₹ {{ transaction.amount }}
+
+                        </td>
+
+                        <td>
+
+                            ₹ {{ transaction.balance_after }}
+
+                        </td>
+
+                    </tr>
+
+                {% empty %}
+
+                    <tr>
+
+                        <td colspan="4" class="text-center py-5">
+
+                            <h5>No Transactions Found</h5>
+
+                            <small class="text-muted">
+
+                                Your transaction history will appear here.
+
+                            </small>
+
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

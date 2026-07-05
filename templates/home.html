@@ -1,0 +1,470 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero-section">
+
+    <div class="hero-left">
+
+        <span class="hero-badge">
+            🚀 AI Powered Banking Platform
+        </span>
+
+        <h1>
+            Smart Banking <br>
+            Made <span>Simple</span>
+        </h1>
+
+        <p>
+
+            Experience secure digital banking with instant transfers,
+            real-time balance tracking, AI financial insights,
+            downloadable statements and 24×7 accessibility.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{% url 'login' %}" class="btn-primary-custom">
+                Sign In
+            </a>
+
+            <a href="{% url 'register' %}" class="btn-outline-custom">
+                Open Account
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="bank-card">
+
+            <div class="card-top">
+
+                <h4>SmartBank Pro</h4>
+
+                <i class="fas fa-wifi"></i>
+
+            </div>
+
+            <h2>₹ 1,25,450</h2>
+
+            <p>Available Balance</p>
+
+            <div class="card-bottom">
+
+                <div>
+
+                    <small>Account</small>
+
+                    <h5>•••• 4589</h5>
+
+                </div>
+
+                <div>
+
+                    <small>Status</small>
+
+                    <h5>Active</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= TRUSTED SECTION ================= -->
+
+<section class="trusted-section">
+
+    <div class="trusted-header">
+
+        <span class="section-tag">
+            TRUSTED BY THOUSANDS
+        </span>
+
+        <h2>
+            Banking That Millions Trust
+        </h2>
+
+        <p>
+            Built with security, reliability and speed for modern digital banking.
+        </p>
+
+    </div>
+
+    <div class="trusted-grid">
+
+        <div class="trusted-card">
+
+            <div class="trusted-icon">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <h2>1000+</h2>
+
+            <h5>Customers</h5>
+
+            <p>
+                Happy customers using SmartBank Pro every day.
+            </p>
+
+        </div>
+
+        <div class="trusted-card">
+
+            <div class="trusted-icon">
+                <i class="fas fa-money-check-dollar"></i>
+            </div>
+
+            <h2>5000+</h2>
+
+            <h5>Transactions</h5>
+
+            <p>
+                Safe and successful transactions completed.
+            </p>
+
+        </div>
+
+        <div class="trusted-card">
+
+            <div class="trusted-icon">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+
+            <h2>99.9%</h2>
+
+            <h5>Secure</h5>
+
+            <p>
+                Industry-grade security protecting every payment.
+            </p>
+
+        </div>
+
+        <div class="trusted-card">
+
+            <div class="trusted-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+
+            <h2>24×7</h2>
+
+            <h5>Support</h5>
+
+            <p>
+                Banking support whenever you need assistance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-section">
+
+    <div class="why-header">
+
+        <span class="section-tag">
+            WHY CHOOSE US
+        </span>
+
+        <h2>
+            Banking Designed Around Your Lifestyle
+        </h2>
+
+        <p>
+            SmartBank Pro combines security, speed and innovation to deliver a
+            seamless banking experience for every customer.
+        </p>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fas fa-shield-halved"></i>
+            </div>
+
+            <h4>Bank Grade Security</h4>
+
+            <p>
+                Your money and personal information are protected using
+                advanced encryption and secure authentication.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+
+            <h4>Instant Banking</h4>
+
+            <p>
+                Deposit, withdraw and transfer money instantly with
+                real-time balance updates.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+
+            <h4>AI Financial Insights</h4>
+
+            <p>
+                Understand your spending habits through intelligent
+                savings and transaction analysis.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fas fa-file-arrow-down"></i>
+            </div>
+
+            <h4>Digital Statements</h4>
+
+            <p>
+                Download account statements anytime in PDF
+                and Excel formats with a single click.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fas fa-mobile-screen-button"></i>
+            </div>
+
+            <h4>Access Anywhere</h4>
+
+            <p>
+                Manage your banking securely from anywhere
+                using any device connected to the internet.
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+
+            <h4>24×7 Support</h4>
+
+            <p>
+                Our support team is always available to help
+                with your banking needs.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how-section">
+
+    <div class="how-header">
+
+        <span class="section-tag">
+            HOW IT WORKS
+        </span>
+
+        <h2>
+            Banking in 5 Simple Steps
+        </h2>
+
+        <p>
+            Open an account, manage your money, and enjoy secure digital banking
+            in just a few simple steps.
+        </p>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fas fa-user-plus"></i>
+            </div>
+
+            <h4>Create Account</h4>
+
+            <p>
+                Register your SmartBank Pro account in minutes.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fas fa-right-to-bracket"></i>
+            </div>
+
+            <h4>Secure Login</h4>
+
+            <p>
+                Sign in securely using your account credentials.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fas fa-money-check-dollar"></i>
+            </div>
+
+            <h4>Banking Services</h4>
+
+            <p>
+                Deposit, withdraw and transfer money instantly.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fas fa-chart-column"></i>
+            </div>
+
+            <h4>Track Activity</h4>
+
+            <p>
+                View transactions, statements and account history.
+            </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+
+            <h4>AI Insights</h4>
+
+            <p>
+                Receive smart financial insights and spending analysis.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= OUR SERVICES ================= -->
+
+<section class="services-section">
+
+    <div class="container">
+
+        <div class="services-header">
+
+            <span class="section-tag">
+                OUR SERVICES
+            </span>
+
+            <h2>
+                Everything You Need for Digital Banking
+            </h2>
+
+            <p>
+                Manage your finances effortlessly with secure, fast and intelligent banking services.
+            </p>
+
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon deposit">
+                    <i class="fas fa-wallet"></i>
+                </div>
+
+                <h4>Deposit Money</h4>
+
+                <p>
+                    Add funds to your account instantly with secure transactions.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon withdraw">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+
+                <h4>Withdraw Money</h4>
+
+                <p>
+                    Withdraw funds safely while maintaining complete transaction history.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon transfer">
+                    <i class="fas fa-right-left"></i>
+                </div>
+
+                <h4>Transfer Money</h4>
+
+                <p>
+                    Send money securely between accounts in real time.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <div class="service-icon statement">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+
+                <h4>Account Statements</h4>
+
+                <p>
+                    Download professional PDF and Excel statements whenever you need.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}

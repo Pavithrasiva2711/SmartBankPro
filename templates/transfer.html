@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/transfer.css' %}">
+
+<div class="container py-5">
+
+    <!-- Page Header -->
+
+    <div class="transfer-header">
+
+        <h1>Transfer Money</h1>
+
+        <p>
+            Send money securely to another SmartBank Pro account with instant processing.
+        </p>
+
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+        <!-- Transfer Form -->
+
+        <div class="col-lg-7">
+
+            <div class="transfer-card">
+
+                <div class="card-title-box">
+
+                    <div class="icon-circle">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>New Transfer</h3>
+
+                        <small>Complete the details below.</small>
+
+                    </div>
+
+                </div>
+
+                <form method="POST">
+
+                    {% csrf_token %}
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+
+                            Receiver Account Number
+
+                        </label>
+
+                        <input
+                            type="text"
+                            name="receiver_account"
+                            class="form-control"
+                            placeholder="Enter Receiver Account Number"
+                            required>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+
+                            Amount (₹)
+
+                        </label>
+
+                        <input
+                            type="number"
+                            step="0.01"
+                            name="amount"
+                            class="form-control"
+                            placeholder="Enter Amount"
+                            required>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+
+                            Remarks (Optional)
+
+                        </label>
+
+                        <textarea
+                            name="remarks"
+                            rows="4"
+                            class="form-control"
+                            placeholder="Purpose of transfer"></textarea>
+
+                    </div>
+
+                    <button class="transfer-btn">
+
+                        <i class="fas fa-arrow-right me-2"></i>
+
+                        Transfer Money
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="col-lg-5">
+
+            <div class="info-card">
+
+                <h4>
+
+                    Available Balance
+
+                </h4>
+
+                <h2>
+
+                    ₹ {{ customer.balance }}
+
+                </h2>
+
+                <hr>
+
+                <h5>
+
+                    Transfer Tips
+
+                </h5>
+
+                <ul>
+
+                    <li>Verify the receiver account number.</li>
+
+                    <li>Double-check the transfer amount.</li>
+
+                    <li>Transfers are processed instantly.</li>
+
+                    <li>Your transaction is protected with encryption.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+<div class="profile-section">
+
+    <div class="container">
+
+        <div class="profile-card">
+
+            <div class="profile-header">
+
+                <div class="profile-avatar">
+
+                    <i class="fas fa-user"></i>
+
+                </div>
+
+                <h2>{{ customer.full_name }}</h2>
+
+                <p>SmartBank Pro Customer</p>
+
+            </div>
+
+            <div class="profile-body">
+
+                <div class="profile-item">
+
+                    <span>Account Number</span>
+
+                    <strong>{{ customer.account_number }}</strong>
+
+                </div>
+
+                <div class="profile-item">
+
+                    <span>Email Address</span>
+
+                    <strong>{{ customer.email }}</strong>
+
+                </div>
+
+                <div class="profile-item">
+
+                    <span>Mobile Number</span>
+
+                    <strong>{{ customer.mobile }}</strong>
+
+                </div>
+
+                <div class="profile-item">
+
+                    <span>Account Type</span>
+
+                    <strong>{{ customer.account_type }}</strong>
+
+                </div>
+
+                <div class="profile-item">
+
+                    <span>Date of Birth</span>
+
+                    <strong>{{ customer.date_of_birth }}</strong>
+
+                </div>
+
+                <div class="profile-item">
+
+                    <span>Current Balance</span>
+
+                    <strong class="balance">
+
+                        ₹ {{ customer.balance }}
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="profile-footer">
+
+                <a href="{% url 'dashboard' %}" class="back-btn">
+
+                    <i class="fas fa-arrow-left"></i>
+
+                    Back to Dashboard
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

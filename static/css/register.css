@@ -1,0 +1,308 @@
+/*=========================================
+            REGISTER PAGE
+=========================================*/
+
+body{
+    background:#f5f7fb;
+    font-family:'Poppins',sans-serif;
+}
+
+/*=========================================
+            HEADER
+=========================================*/
+
+.register-header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.register-header h1{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin-bottom:12px;
+
+}
+
+.register-header p{
+
+    font-size:17px;
+
+    color:#64748b;
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+            CARD
+=========================================*/
+
+.register-card{
+
+    background:#ffffff;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    animation:fadeUp .7s ease;
+
+}
+
+/*=========================================
+        SECTION TITLE
+=========================================*/
+
+.section-title{
+
+    color:#2563eb;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+    margin-top:10px;
+
+}
+
+hr{
+
+    margin:35px 0;
+
+}
+
+/*=========================================
+            FORM
+=========================================*/
+
+.form-label{
+
+    font-weight:600;
+
+    color:#334155;
+
+    margin-bottom:10px;
+
+}
+
+.form-control,
+.form-select{
+
+    border-radius:12px;
+
+    border:1px solid #dbe4f0;
+
+    padding:14px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    box-shadow:none;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/*=========================================
+        TEXTAREA
+=========================================*/
+
+textarea.form-control{
+
+    resize:none;
+
+}
+
+/*=========================================
+        BUTTON
+=========================================*/
+
+.register-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    margin-top:15px;
+
+}
+
+.register-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/*=========================================
+        LOGIN LINK
+=========================================*/
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#64748b;
+
+}
+
+.login-link a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/*=========================================
+        ALERT
+=========================================*/
+
+.alert{
+
+    border-radius:12px;
+
+    margin-top:20px;
+
+}
+
+/*=========================================
+        ANIMATION
+=========================================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.register-card{
+
+padding:35px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.register-header h1{
+
+font-size:32px;
+
+}
+
+.register-header p{
+
+font-size:15px;
+
+}
+
+.register-card{
+
+padding:28px;
+
+}
+
+.section-title{
+
+font-size:22px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.register-header h1{
+
+font-size:26px;
+
+}
+
+.register-card{
+
+padding:22px 18px;
+
+border-radius:18px;
+
+}
+
+.register-btn{
+
+padding:13px;
+
+font-size:16px;
+
+}
+
+}

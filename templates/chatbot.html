@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+
+<div class="container py-5">
+
+    <div class="chat-header">
+
+        <h1>🤖 SmartBank AI Assistant</h1>
+
+        <p>
+
+            Get instant answers about your banking account, balance,
+            transactions and financial queries.
+
+        </p>
+
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="card chat-card">
+
+                <div class="card-header">
+
+                    <h3>
+
+                        SmartBank AI
+
+                    </h3>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div id="chat-box">
+
+                        <div class="ai-message">
+
+                            <strong>🤖 SmartBank AI</strong>
+
+                            <p>
+
+                                Hello
+                                {{ request.user.first_name|default:request.user.username }}
+                                👋
+
+                                <br><br>
+
+                                Welcome to SmartBank Pro.
+
+                                I'm here to help you with your banking
+                                questions.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group mt-4">
+
+                        <input
+                            type="text"
+                            id="user-message"
+                            class="form-control"
+                            placeholder="Ask something...">
+
+                        <button
+                            id="send-btn"
+                            class="btn btn-primary">
+
+                            Send
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const chatBox = document.getElementById("chat-box");
+
+const input = document.getElementById("user-message");
+
+const button = document.getElementById("send-btn");
+
+button.onclick = async () => {
+
+    const message = input.value.trim();
+
+    if(message==="") return;
+
+    chatBox.innerHTML += `
+
+    <div class="user-message">
+
+        <strong>You</strong>
+
+        <p>${message}</p>
+
+    </div>
+
+    `;
+
+    input.value="";
+
+    chatBox.scrollTop=chatBox.scrollHeight;
+
+    const response = await fetch("{% url 'ask_ai' %}",{
+
+        method:"POST",
+
+        headers:{
+
+            "Content-Type":"application/json",
+
+            "X-CSRFToken":"{{ csrf_token }}"
+
+        },
+
+        body:JSON.stringify({
+
+            message:message
+
+        })
+
+    });
+
+    const data = await response.json();
+
+    chatBox.innerHTML += `
+
+    <div class="ai-message">
+
+        <strong>🤖 SmartBank AI</strong>
+
+        <p>${data.reply}</p>
+
+    </div>
+
+    `;
+
+    chatBox.scrollTop=chatBox.scrollHeight;
+
+};
+
+input.addEventListener("keypress",function(e){
+
+    if(e.key==="Enter"){
+
+        button.click();
+
+    }
+
+});
+
+</script>
+
+{% endblock %}

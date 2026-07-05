@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<div class="container py-5">
+
+    <div class="row justify-content-center align-items-center">
+
+        <!-- Left Side -->
+
+        <div class="col-lg-5 d-none d-lg-block">
+
+            <div class="login-info">
+
+                <h1>
+
+                    Welcome Back
+
+                </h1>
+
+                <p>
+
+                    Securely access your SmartBank Pro account and manage
+                    your banking anytime, anywhere.
+
+                </p>
+
+                <div class="login-icon">
+
+                    <i class="fas fa-building-columns"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="col-lg-5 col-md-8 col-sm-12">
+
+            <div class="login-card">
+
+                <h2>
+
+                    Sign In
+
+                </h2>
+
+                <p>
+
+                    Login to continue your banking journey.
+
+                </p>
+
+                {% if messages %}
+
+                    {% for message in messages %}
+
+                        <div class="alert alert-danger">
+
+                            {{ message }}
+
+                        </div>
+
+                    {% endfor %}
+
+                {% endif %}
+
+                <form method="POST">
+
+                    {% csrf_token %}
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+
+                            Username
+
+                        </label>
+
+                        <input
+                            type="text"
+                            name="username"
+                            class="form-control"
+                            placeholder="Enter Username"
+                            required>
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+
+                            Password
+
+                        </label>
+
+                        <input
+                            type="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="Enter Password"
+                            required>
+
+                    </div>
+
+                    <button class="login-btn">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <div class="text-center mt-4">
+
+                    Don't have an account?
+
+                    <a href="{% url 'register' %}">
+
+                        Register
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

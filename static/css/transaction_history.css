@@ -1,0 +1,402 @@
+/*=========================================
+        TRANSACTION HISTORY
+=========================================*/
+
+body{
+    background:#f5f7fb;
+    font-family:'Poppins',sans-serif;
+}
+
+/*=========================================
+        PAGE HEADER
+=========================================*/
+
+.page-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.page-header h1{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    margin-bottom:12px;
+
+}
+
+.page-header p{
+
+    color:#64748b;
+
+    font-size:17px;
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+        FILTER CARD
+=========================================*/
+
+.filter-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    margin-bottom:35px;
+
+    animation:fadeUp .6s ease;
+
+}
+
+.form-label{
+
+    font-weight:600;
+
+    color:#334155;
+
+    margin-bottom:8px;
+
+}
+
+.form-control{
+
+    border-radius:12px;
+
+    border:1px solid #dbe4f0;
+
+    padding:14px;
+
+    box-shadow:none;
+
+    transition:.3s;
+
+}
+
+.form-control:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/*=========================================
+        BUTTON
+=========================================*/
+.filter-btn{
+
+    height:48px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}
+
+.filter-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/*=========================================
+        TABLE CARD
+=========================================*/
+
+.table-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    border:1px solid #e5e7eb;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    animation:fadeUp .8s ease;
+
+}
+
+.table{
+
+    margin:0;
+
+}
+
+.table thead{
+
+    background:#2563eb;
+
+}
+
+.table thead th{
+
+    color:#fff;
+
+    font-weight:600;
+
+    padding:18px;
+
+    border:none;
+
+}
+
+.table tbody td{
+
+    padding:18px;
+
+    vertical-align:middle;
+
+    border-color:#eef2f7;
+
+    color:#334155;
+
+}
+
+.table tbody tr{
+
+    transition:.3s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#f8fbff;
+
+}
+
+/*=========================================
+        TYPE BADGE
+=========================================*/
+
+.type-badge{
+
+    display:inline-block;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+        EMPTY STATE
+=========================================*/
+
+.table tbody h5{
+
+    color:#1e293b;
+
+    font-weight:600;
+
+}
+
+.table tbody small{
+
+    color:#64748b;
+
+}
+
+/*=========================================
+        ANIMATION
+=========================================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.page-header h1{
+
+font-size:34px;
+
+}
+
+.filter-card{
+
+padding:25px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.page-header h1{
+
+font-size:30px;
+
+}
+
+.page-header p{
+
+font-size:15px;
+
+}
+
+.filter-card{
+
+padding:20px;
+
+}
+
+.table thead th{
+
+font-size:14px;
+
+padding:14px;
+
+}
+
+.table tbody td{
+
+font-size:14px;
+
+padding:14px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.page-header{
+
+margin-bottom:30px;
+
+}
+
+.page-header h1{
+
+font-size:26px;
+
+}
+
+.filter-btn{
+
+margin-top:10px;
+
+}
+
+.type-badge{
+
+font-size:12px;
+
+padding:6px 12px;
+
+}
+
+.table-card{
+
+border-radius:16px;
+
+}
+
+}
+/*=========================================
+        DOWNLOAD BUTTONS
+=========================================*/
+
+.download-btns{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.download-btns .btn{
+
+    padding:10px 22px;
+
+    font-weight:600;
+
+    border-radius:8px;
+
+}
+
+@media(max-width:768px){
+
+.download-btns{
+
+    justify-content:center;
+
+}
+
+.download-btns .btn{
+
+    width:100%;
+
+}
+
+}
+
+.download-btns{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}

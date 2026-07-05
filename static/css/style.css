@@ -1,0 +1,775 @@
+/*====================================================
+                GOOGLE FONT
+====================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*====================================================
+                GLOBAL RESET
+====================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fb;
+
+    color:#1e293b;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+
+/*====================================================
+                LINKS
+====================================================*/
+
+a{
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    text-decoration:none;
+
+}
+
+
+/*====================================================
+                IMAGES
+====================================================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+/*====================================================
+                BUTTONS
+====================================================*/
+
+.btn{
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*====================================================
+                    NAVBAR
+====================================================*/
+
+.navbar{
+
+    background:#0f172a !important;
+
+    padding:14px 0;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    position:relative;
+
+    width:100%;
+
+    z-index:100;
+
+}
+
+.navbar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#fff !important;
+
+    text-decoration:none;
+
+}
+
+.brand-title{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#fff;
+
+    line-height:1.2;
+
+}
+
+.brand-subtitle{
+
+    color:#cbd5e1;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+}
+
+.nav-link{
+
+    color:#fff !important;
+
+    font-weight:500;
+
+    margin-left:18px;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:#3b82f6;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover::after,
+
+.nav-link.active::after{
+
+    width:100%;
+
+}
+
+.nav-link:hover,
+
+.nav-link.active{
+
+    color:#60a5fa !important;
+
+}
+
+.navbar-toggler{
+
+    border:none;
+
+}
+
+.navbar-toggler:focus{
+
+    box-shadow:none;
+
+}
+
+.user-pill{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#1e293b;
+
+    padding:8px 15px;
+
+    border-radius:50px;
+
+    color:#fff;
+
+}
+
+.user-pill i{
+
+    font-size:24px;
+
+    color:#60a5fa;
+
+}
+
+.user-pill strong{
+
+    display:block;
+
+    font-size:14px;
+
+}
+
+.user-pill small{
+
+    display:block;
+
+    color:#cbd5e1;
+
+    font-size:11px;
+
+}
+
+.logout-btn,
+
+.register-btn{
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:#fff !important;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover,
+
+.register-btn:hover{
+
+    background:#1d4ed8;
+
+    color:#fff !important;
+
+}
+
+@media(max-width:991px){
+
+.navbar-nav{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+.nav-link{
+
+    margin:12px 0;
+
+}
+
+.user-pill{
+
+    justify-content:center;
+
+    margin:20px auto;
+
+}
+
+.logout-btn,
+
+.register-btn{
+
+    display:block;
+
+    width:220px;
+
+    margin:15px auto;
+
+}
+
+}
+
+/*====================================================
+                ALERTS
+====================================================*/
+
+.alert{
+
+    border-radius:12px;
+
+    border:none;
+
+}
+
+
+/*====================================================
+                MAIN CONTENT
+====================================================*/
+
+main{
+
+    min-height:70vh;
+
+}
+
+
+/*====================================================
+                FOOTER
+====================================================*/
+
+.footer{
+
+    background:#0f172a;
+
+    color:#fff;
+
+    margin-top:80px;
+
+    padding:60px 0 25px;
+
+}
+
+.footer h3,
+
+.footer h5{
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+.footer p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+}
+
+.footer ul{
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.footer ul li{
+
+    margin-bottom:12px;
+
+}
+
+.footer ul li a{
+
+    color:#cbd5e1;
+
+    transition:.3s;
+
+}
+
+.footer ul li a:hover{
+
+    color:#60a5fa;
+
+    padding-left:5px;
+
+}
+
+.footer hr{
+
+    border-color:rgba(255,255,255,.1);
+
+    margin:30px 0;
+
+}
+.footer-copy{
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:#94a3b8;
+
+    margin:0;
+
+    padding-top:15px;
+
+}
+
+/*====================================================
+                SCROLLBAR
+====================================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+/*====================================================
+                COMMON ANIMATION
+====================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*====================================================
+                RESPONSIVE
+====================================================*/
+
+@media(max-width:992px){
+
+.navbar-nav{
+
+    margin-top:15px;
+
+}
+
+.nav-link{
+
+    margin:10px 0;
+
+}
+
+.footer{
+
+    text-align:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar-brand{
+
+    font-size:24px;
+
+}
+
+main{
+
+    min-height:auto;
+
+}
+
+}
+
+@media(max-width:576px){
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 45px 0 20px;
+}
+
+/* Logo */
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Titles */
+.footer-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+.footer-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Row alignment fix */
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;   /* IMPORTANT: top alignment */
+}
+
+/* Column alignment */
+.footer .col-lg-5,
+.footer .col-lg-3,
+.footer .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Lists reset */
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List items spacing */
+.footer ul li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* Links */
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer a:hover {
+    opacity: 0.7;
+}
+
+/* Feature icons alignment */
+.footer-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Horizontal line */
+.footer-line {
+    margin: 20px 0 10px;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+/* Bottom text */
+.footer-copy {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}}
+/*====================================================
+            FLOATING AI ASSISTANT
+====================================================*/
+
+.floating-chatbot{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:#ffffff;
+
+    padding:10px 16px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+    z-index:9999;
+
+    animation:floatBot 2.8s ease-in-out infinite;
+
+}
+
+.chat-icon{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.chat-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    line-height:1.2;
+
+}
+
+.chat-text small{
+
+    color:#64748b;
+
+    font-size:12px;
+
+}
+
+.chat-text strong{
+
+    color:#0f172a;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.floating-chatbot:hover{
+
+    transform:translateY(-6px) scale(1.03);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.28);
+
+    color:inherit;
+
+}
+
+@keyframes floatBot{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.floating-chatbot{
+
+    right:15px;
+
+    bottom:15px;
+
+    padding:8px 12px;
+
+}
+
+.chat-icon{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:20px;
+
+}
+
+.chat-text strong{
+
+    font-size:13px;
+
+}
+
+.chat-text small{
+
+    font-size:11px;
+
+}
+
+}
+body{
+
+    background:
+    radial-gradient(circle at top right,#dbeafe 0%,transparent 35%),
+    radial-gradient(circle at bottom left,#e0f2fe 0%,transparent 35%),
+    #f8fafc;
+
+    font-family:'Poppins',sans-serif;
+
+}

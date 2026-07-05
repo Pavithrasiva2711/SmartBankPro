@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            padding:30px;
+        }
+
+        .container{
+            max-width:600px;
+            margin:auto;
+            background:white;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header{
+            background:#0d6efd;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        .content{
+            padding:30px;
+        }
+
+        .details{
+            background:#f8f9fa;
+            padding:15px;
+            border-radius:8px;
+            margin-top:20px;
+        }
+
+        .footer{
+            text-align:center;
+            background:#eeeeee;
+            padding:15px;
+            color:#666;
+            font-size:14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🏦 SmartBank Pro</h1>
+        <h3>Welcome!</h3>
+    </div>
+
+    <div class="content">
+
+        <h2>Hello {{ customer.full_name }},</h2>
+
+        <p>
+            Welcome to <b>SmartBank Pro</b>.
+            Your account has been created successfully.
+        </p>
+
+        <div class="details">
+
+            <p><b>Account Number:</b> {{ customer.account_number }}</p>
+
+            <p><b>Email:</b> {{ customer.user.email }}</p>
+
+            <p><b>Account Type:</b> {{ customer.account_type }}</p>
+
+        </div>
+
+        <p>
+            Thank you for choosing SmartBank Pro.
+        </p>
+
+    </div>
+
+    <div class="footer">
+
+        © 2026 SmartBank Pro<br>
+
+        Secure Banking System
+
+    </div>
+
+</div>
+
+</body>
+</html>
